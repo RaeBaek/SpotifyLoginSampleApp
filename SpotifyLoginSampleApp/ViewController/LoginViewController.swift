@@ -42,4 +42,4 @@ class LoginViewController: UIViewController {
 }
 
 
-// git 커밋 확인 중
+//github 커밋 작동 상태 확인중
