@@ -121,6 +121,7 @@
 				1450A73028AE433100D053A1 /* Frameworks */,
 				1450A73128AE433100D053A1 /* Resources */,
 				39DE2E2672233D7720FBE59F /* [CP] Embed Pods Frameworks */,
+				7E1EE51022B9EE9402684697 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +195,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E1EE51022B9EE9402684697 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E96B19ECC6C12CF73A751D6 /* [CP] Check Pods Manifest.lock */ = {

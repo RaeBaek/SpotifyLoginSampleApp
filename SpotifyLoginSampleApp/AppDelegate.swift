@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Firebase 초기화
         FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         return true
     }
@@ -37,3 +41,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        if let error = error {
+            print ("Error Google sign in: %@", error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) {[weak self] _, _ in
+            self?.showMainViewController()
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+}
+
+extension AppDelegate {
+    ///Main 화면으로 보내기
+    func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+    }
+}
