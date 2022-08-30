@@ -30,6 +30,7 @@
 		1450A74A28AE437000D053A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1450A74C28AE4A9800D053A1 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		145B811728AE534500510682 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		149EECFC28BDFA02001A0CCF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		14E26B8628AE5ED300716BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50C3198AED225F3CB9CE7997 /* Pods-SpotifyLoginSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5380FFFA5AA369C418C84E1C /* Pods_SpotifyLoginSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyLoginSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +52,7 @@
 		1450A72A28AE433100D053A1 = {
 			isa = PBXGroup;
 			children = (
+				149EECFC28BDFA02001A0CCF /* README.md */,
 				1450A73528AE433100D053A1 /* SpotifyLoginSampleApp */,
 				1450A73428AE433100D053A1 /* Products */,
 				A9203FD1E9088AAB5AA98228 /* Pods */,
@@ -97,7 +99,6 @@
 				50C3198AED225F3CB9CE7997 /* Pods-SpotifyLoginSampleApp.debug.xcconfig */,
 				E1F0C79178ADEE0FF73167D3 /* Pods-SpotifyLoginSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
